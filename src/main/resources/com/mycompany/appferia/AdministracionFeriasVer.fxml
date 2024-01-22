@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.appferia.AdministracionFeriasControllerVer">
+   <top>
+      
+   <VBox alignment="CENTER" prefHeight="79.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="164.0" text="Listado de  Ferias">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+            
+         </children>
+      </VBox>
+   </top>
+
+   
+   <bottom>
+   </bottom>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="59.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#mostrarVentana" text="Agregar Feria" />
+            <Label fx:id="lblMsj" text="     " />
+            <Button mnemonicParsing="false" onAction="#switchToPrimary" text="Regresar" />
+            
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <TableView fx:id="tvFerias" onMouseClicked="#mostrarDetalle" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colNombre" prefWidth="100.0" text="Nombre" />
+          <TableColumn fx:id="colDescripcion" prefWidth="100.0" text="Descripcion" />
+            <TableColumn fx:id="colLugar" prefWidth="100.0" text="Lugar" />
+            <TableColumn fx:id="colInicio" prefWidth="92.0" text="Inicio" visible="false"/>
+            <TableColumn fx:id="colFinal" prefWidth="71.0" text="Final" visible="false" />
+            <TableColumn fx:id="colHorario" maxWidth="301.0" prefWidth="87.0" text="Horario" />
+             <TableColumn fx:id="colOpc" prefWidth="172.0" text="Opciones" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
