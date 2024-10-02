@@ -101,7 +101,8 @@ public class Emprendedor extends Trabajador implements Comparable<Emprendedor> {
         if (!Objects.equals(this.getCedula(), other.getCedula())) {
             return false;
         }
-        return true;
+        return true:
+		
     }
     
 }
